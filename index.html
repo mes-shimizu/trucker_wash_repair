@@ -1,27 +1,31 @@
 <!doctype html>
 <html>
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta charset="UTF-8">
 <meta name="robots" content="noindex"><!--インデックス拒否-->
 <meta name="format-detection" content="telephone=no" />
+<meta http-equiv="content-language" content="ja">
 <meta http-equiv="content-style-type" content="text/css">
 <meta http-equiv="content-script-type" content="text/javascript">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<!--スマホ時のみviewportでレスポンシブ設定 = タブレット表示対策-->
 <script type="text/javascript">
-	if ((navigator.userAgent.indexOf('iPhone') > 0) || navigator.userAgent.indexOf('iPod') > 0 || navigator.userAgent.indexOf('Android') > 0) {
-			document.write('<meta name="viewport" content="width=device-width, maximum-scale=1, user-scalable=no">');
-	}
+if ((navigator.userAgent.indexOf('iPhone') > 0) || navigator.userAgent.indexOf('iPod') > 0
+    || (navigator.userAgent.indexOf('Android') > 0 && navigator.userAgent.indexOf('Mobile') > 0)) {
+    document.write('<meta name="viewport" content="width=device-width, initial-scale=1">');
+}
 </script>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
-<title>空バンレーン</title>
+<title>Trucker View</title>
 <link href="img/common/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon"><!--favicon-->
 <link href="web_font_notosans/font.css" rel="stylesheet" type="text/css" /><!--font-japanese-->
 <link href="web_font_Roboto-Condensed/font.css" rel="stylesheet" type="text/css" /><!--font-english-->
 <link href="css/common/common.css" rel="stylesheet" type="text/css" /><!--共通CSS-->
 <link href="css/header_lane.css" rel="stylesheet" type="text/css" /><!--header_input-->
 <link href="css/lane_empty.css" rel="stylesheet" type="text/css" /><!--ページ毎のCSS-->
+
+<link rel="stylesheet" href="/css/trucker-view.css" />
 <script>
 	// スマートフォンのみで動作するように条件を追加、だがタブレットでも出てしまうケースあり
 	if ((navigator.userAgent.indexOf('iPhone') > 0) || navigator.userAgent.indexOf('iPod') > 0 || navigator.userAgent.indexOf('Android') > 0) {
