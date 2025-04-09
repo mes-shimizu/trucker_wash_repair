@@ -84,14 +84,39 @@
 				</li>
 			</ul>
 		</div><!--head_data-->
-		<div class="signal">
-			<img src="img/mark/obj_ok_circle.svg" alt="○マーク">
-<!-- 			<img class="flicker" src="img/mark/obj_ok_circle_hover.svg" alt="○マーク"><!--フリック時の○マーク-->
-			<p class="ok_lane green bold">袖師 空バンレーンです</p>
-			<p class="attention">交通整理員がいる場合は指示に従ってください</p>
-		</div><!--signal-->
+
+		<div class="signal_fixed @show_message">
+                	<div class="signal signal-ani1" id="pnl_signal_ani">
+                    		@* modify START 2024/09/17 J. Namba 【2024/09仕様変更】 有人レーン、空バンレーンの進入可通知の取止 *@
+                    		@*<img src="~/Content/img/mark/obj_ok_circle.svg" alt="○マーク">
+                    		<img class="flicker signal-ani3" src="~/Content/img/mark/obj_ok_circle_hover.svg" alt="○マーク" id="img_flicker">*@
+                    		<img src="~/Content/img/mark/obj_none.svg">
+                  		<img class="flicker signal-ani3" src="~/Content/img/mark/obj_none_hover.svg" id="img_flicker">
+                    		@* modify END   2024/09/17 J. Namba 【2024/09仕様変更】 有人レーン、空バンレーンの進入可通知の取止 *@
+                    		<p class="ok_lane green bold signal-ani2">@JobLane.getYardName(Model.JobLane) 空バンレーンです</p>
+                    		@* modify START 2024/09/17 J. Namba 【2024/09仕様変更】 有人レーン、空バンレーンの進入可通知の取止 *@
+                    		@*<p class="ok_lane green bold signal-ani2" id="p_ok_lane"><span>@Model.JobLane@Model.JobBay</span>進入可</p>*@
+                    		<p class="ok_lane green bold signal-ani2" id="p_ok_lane"><span>@Model.JobLane@Model.JobBay</span></p>
+                    		@* modify END   2024/09/17 J. Namba 【2024/09仕様変更】 有人レーン、空バンレーンの進入可通知の取止 *@
+                    		<p class="attention signal-ani4" id="p_attention">交通整理員がいる場合は指示に従ってください</p>
+                	</div>
+                	<div class="signal" style="display: none;" id="pnl_signal">
+                   		 @* modify START 2024/09/17 J. Namba 【2024/09仕様変更】 有人レーン、空バンレーンの進入可通知の取止 *@
+                   		 @*<img src="~/Content/img/mark/obj_ok_circle.svg" alt="○マーク">
+                  		<img class="flicker" src="~/Content/img/mark/obj_ok_circle_hover.svg" alt="○マーク" id="img_flicker">*@
+                   		<img src="~/Content/img/mark/obj_none.svg">
+                  		<img class="flicker" src="~/Content/img/mark/obj_none_hover.svg" id="img_flicker">
+                    		@* modify END   2024/09/17 J. Namba 【2024/09仕様変更】 有人レーン、空バンレーンの進入可通知の取止 *@
+                    		<p class="ok_lane green bold">@JobLane.getYardName(Model.JobLane) 空バンレーンです</p>
+                    		@* modify START 2024/09/17 J. Namba 【2024/09仕様変更】 有人レーン、空バンレーンの進入可通知の取止 *@
+                    		@*<p class="ok_lane green bold" id="p_ok_lane"><span>@Model.JobLane@Model.JobBay</span>進入可</p>*@
+                    		<p class="ok_lane green bold" id="p_ok_lane"><span>@Model.JobLane@Model.JobBay</span></p>
+                    		@* modify END   2024/09/17 J. Namba 【2024/09仕様変更】 有人レーン、空バンレーンの進入可通知の取止 *@
+                    		<p class="attention" id="p_attention">交通整理員がいる場合は指示に従ってください</p>
+                	</div>
+            </div>
 		
-		<div class="blank"></div>
+	<div class="blank"></div>
 		
 		<div class="job">
 			<h2>レーンジョブ</h2>
